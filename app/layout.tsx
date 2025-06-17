@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -8,8 +9,9 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Converso",
-  description: "Real-time AI Teaching Platform",
+  title: "perdisco",
+  description:
+    "Real-time AI Teaching Platform for Students and Teachers alike with a focus on personalized learning experiences.",
 };
 
 export default function RootLayout({
@@ -19,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${bricolage.variable} antialiased`}>{children}</body>
+      <body className={`${bricolage.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

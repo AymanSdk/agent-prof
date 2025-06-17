@@ -5,7 +5,8 @@ import React from "react";
 const Page = () => {
   return (
     <div className='flex flex-col items-center justify-center gap-2'>
-      <h1 className='text-2xl underline'>Welcome to my Saas App</h1>
+      <h1 className='text-2xl underline'>Welcome to my new application</h1>
+      <h2>By : Aymane Sadiki</h2>
       <Link href='/sign-in'>
         <Button variant='default'>Get started</Button>
       </Link>
