@@ -1,19 +1,49 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import CompanionCard from "@/components/CompanionCard";
+import CompanionsList from "@/components/CompanionsList";
+import CTA from "@/components/CTA";
+import { recentSessions } from "@/constants";
 import React from "react";
 
 const Page = () => {
   return (
-    <div className='flex flex-col items-center justify-center gap-2'>
-      <h1 className='text-2xl underline'>Welcome to my new application</h1>
-      <h2>By : Aymane Sadiki</h2>
-      <Link href='/sign-in'>
-        <Button variant='default'>Get started</Button>
-      </Link>
-      <Link href='/'>
-        <Button variant='default'>Go Home</Button>
-      </Link>
-    </div>
+    <main>
+      <h1>Popular Companions</h1>
+
+      <section className='home-section'>
+        <CompanionCard
+          id='123'
+          name='Neura the Brainy Explorer'
+          topic='Neural Network of the Brin'
+          subject='Neural Networks'
+          duration={45}
+          color='#4A90E2'
+        />
+        <CompanionCard
+          id='1234'
+          name='Laarbi the Number wizard'
+          topic='derivatives and integrals'
+          subject='Calculus'
+          duration={30}
+          color='#E94E77'
+        />
+        <CompanionCard
+          id='12345'
+          name='zbida the chemical engineer'
+          topic='Chemical Reactions'
+          subject='Chemistry'
+          duration={45}
+          color='#F5A623'
+        />
+      </section>
+      <section className='home-section'>
+        <CompanionsList
+          title='Recently completed sessions'
+          companions={recentSessions}
+          classNames='w-2/3 mx-lg:w-full'
+        />
+        <CTA />
+      </section>
+    </main>
   );
 };
 

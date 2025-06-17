@@ -9,7 +9,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "perdisco",
+  title: "Perdisco",
   description:
     "Real-time AI Teaching Platform for Students and Teachers alike with a focus on personalized learning experiences.",
 };
